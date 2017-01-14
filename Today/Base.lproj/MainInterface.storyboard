@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-T4-uee">
+                                <rect key="frame" x="65" y="4" width="30" height="30"/>
+                                <state key="normal" title="btn1"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hcf-UG-1fJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk7-y1-jb9">
+                                <rect key="frame" x="144" y="3" width="32" height="30"/>
+                                <state key="normal" title="btn2"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="AaN-ks-V72"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-jA-ZPi">
+                                <rect key="frame" x="224" y="3" width="32" height="30"/>
+                                <state key="normal" title="btn3"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="dV8-9d-kDi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECx-an-TTl">
+                                <rect key="frame" x="65" y="44" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ECx-an-TTl" firstAttribute="trailing" secondItem="ZIL-jA-ZPi" secondAttribute="trailing" id="0Uf-gs-IU0"/>
+                            <constraint firstItem="fc3-T4-uee" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="1of-CD-cb4"/>
+                            <constraint firstItem="ZIL-jA-ZPi" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" multiplier="1.5" id="5NK-2e-9ab"/>
+                            <constraint firstItem="ECx-an-TTl" firstAttribute="top" secondItem="fc3-T4-uee" secondAttribute="bottom" constant="10" id="PRi-gh-UKh"/>
+                            <constraint firstItem="sk7-y1-jb9" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="U76-J0-ylk"/>
+                            <constraint firstItem="ECx-an-TTl" firstAttribute="leading" secondItem="fc3-T4-uee" secondAttribute="leading" id="XcD-la-c3j"/>
+                            <constraint firstItem="fc3-T4-uee" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" multiplier="0.5" id="cHw-7N-LnL"/>
+                            <constraint firstItem="ZIL-jA-ZPi" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="fm9-Z8-ovG"/>
+                            <constraint firstItem="sk7-y1-jb9" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="xVB-ze-uTe"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="label" destination="ECx-an-TTl" id="SOb-UU-JEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
